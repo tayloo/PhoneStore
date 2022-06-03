@@ -1,0 +1,110 @@
+.text{border:1px solid black;}
+
+body{
+    display: flex;
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.side-bar{
+    top:0;
+    left:0;
+    position: fixed;
+    width:20rem;
+    height: 100%;
+    background: rgba(0,232,179,1);
+    background: linear-gradient(151deg, rgba(0,232,179,1) 12%, rgba(2,227,232,1) 31%, rgba(0,206,222,1) 48%, rgba(0,165,217,1) 64%, rgba(1,114,193,1) 76%, rgba(0,78,210,1) 87%, rgba(0,90,179,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 2px 0px 10px 1px rgba(0,0,0,0.4);
+}
+
+.company-content{
+    display: flex;
+    position: relative;
+    width:100%;
+    justify-content: center;
+    top:2.5rem;
+    right:0.5rem;
+}
+
+.side-bar .phone-logo{
+    background-image: url("/static/images/store/phone-icon-w.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 3rem;
+    height: 3rem;
+}
+
+.side-bar .company-name{
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: -0.5px;
+    word-spacing: 1px;
+    cursor: default;
+}
+
+.side-bar .sellection-menu{
+    width:100%;
+    top:3rem;
+}
+
+
+content{
+    margin-left: 21rem;
+    margin-right:0.5rem;
+    margin-top:1rem;
+    margin-bottom:3.5rem;
+    width:100%;
+}
+
+.panel{
+    margin:20px 0;
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.4);
+    border-radius: 7px;
+    height: 32rem;
+    background: white;
+}
+
+.product-picture-wrapper{
+    margin:20px auto;
+}
+.product-picture{
+    width:100%;
+    height: 11rem;
+    cursor: pointer;
+    transition: 0.1s ease-out;
+}
+.product-picture:hover{
+    transform: scale(1.1);
+}
+.product-name{
+    font-size: 1.3em;
+    line-height: 1.2em;
+    cursor: pointer;
+}
+.product-name:hover{
+    color:rgba(0,232,179,1);
+}
+.product-description{
+    font-size: 0.9em;
+    margin-top:0.5rem;
+    color:rgba(0,0,0,0.6);
+    text-align: justify;
+}
+.product-bottom{
+    position: absolute;
+    border-top:1px solid rgba(0,0,0,0.2);
+    left:1rem;
+    right:1rem;
+    bottom: 5px;
+}
+.product-price{
+    font-size: 1.4em;
+}
+.btn{
+    width:6rem;
+    margin:10px 20px;
+}

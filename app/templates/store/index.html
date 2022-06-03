@@ -1,0 +1,58 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/store/styles.css'%}"/>
+{% endblock %}
+{% block title %} Phone Store {% endblock %}
+
+{% block content %}
+    <aside class="side-bar">
+        <div class="company-content">
+            <div class="phone-logo"></div>
+            <div class="company-name">{{company_name}}</div>
+        </div>
+        <div class="sellection-menu">
+            
+        </div>
+    </aside>
+    <div class="row">
+    <content>
+        <div class="container">
+            <div class="row justify-content-around">
+                {%for product in products %}
+                <div class="col-lg-6 col-xl-4 col-sm-7">
+                    <div class="row">
+                        <div class="col-lg-1 col-sm-1"></div>
+                        <div class="col-lg-10 panel col-sm-10">
+                            
+                            <div class="row">
+                                <div class="col-9 product-picture-wrapper">
+                                    <a onclick="document.getElementById('form_{{product.id}}').submit(); return false;">
+                                    <img src={{product.picture1_url}} class="product-picture"></a>
+                                </div>
+                                <a onclick="document.getElementById('form_{{product.id}}').submit(); return false;">
+                                    <div class="col-12 product-name">{{product.category.name}} {{product.name}}</div></a>
+                                <div class="col-12 product-description">{{product.desc}} </div>
+                                <div class="col-11 product-bottom">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="product-price col-5">{{product.currency.character}}{{product.price_USD}}</div>
+                                        <form method="GET" action="product/" id='form_{{product.id}}'>
+                                            <input name="cat" value={{product.category.name}}  type='hidden'>
+                                            <input name="prod" value={{product.id}} type='hidden'>
+                                            <button type="submit" class="btn btn-outline-success col-9">Buy</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+                
+            </div>
+        </div>
+        
+    </content>
+    </div>
+{% endblock %}

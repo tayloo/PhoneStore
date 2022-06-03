@@ -1,0 +1,140 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+nav{
+    margin-left: 0;
+    margin-top:2rem;
+}
+
+.border{
+    border:1px solid black;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.nav-company{
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    background: rgba(0,232,179,1);
+    background: linear-gradient(151deg, rgba(0,232,179,1) 12%, rgba(2,227,232,1) 31%, rgba(0,206,222,1) 48%, rgba(0,165,217,1) 64%, rgba(1,114,193,1) 76%, rgba(0,78,210,1) 87%, rgba(0,90,179,1) 100%);
+    box-shadow: 1px 1px 7px 2px rgba(0,0,0,0.4);
+    height: 4rem;
+    min-width: 20rem;
+    border-radius: 7px;
+    transition: 0.5s;
+}
+
+.nav-company:hover{
+    transform: scale(1.05);
+}
+
+.nav-company .text{
+    font-size: 1.8rem;
+    color: white;
+    line-height:2.2em;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.nav-company .phone-logo{
+    background-image: url("/static/images/store/phone-icon-w.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:right;
+    width: 100%;
+    height: 3.2rem;
+}
+
+.content-col{
+    width:99.2%;
+    margin-top:4rem;
+    margin-bottom: 6rem;
+}
+
+.panel{
+    border-radius: 7px;
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.4);
+    background: white;
+}
+
+.go-back{
+    height: 2em;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid rgba(0,0,0,0.4);
+}
+
+.go-back a{
+    display: flex;
+    color: #919191;
+    line-height: 2em;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.go-back a:hover{
+    color: rgba(0,232,179,1);
+}
+.go-back a:hover .arrow-back{
+    background-image: url("https://img.icons8.com/ios-glyphs/60/00E8B3/arrow-pointing-left--v2.png");
+}
+
+.go-back .arrow-back{
+    background-image: url("https://img.icons8.com/ios-glyphs/60/919191/arrow-pointing-left--v2.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:right;
+    width: 1.5em;
+    transition: 0.5s;
+}
+
+.content-product{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(90%);
+}
+
+.product-name{
+    font-size: 1.8em;
+    line-height: 1.2em;
+    margin-top: 2rem;
+}
+
+.product-price{
+    margin-top: 2rem;
+    font-size: 1.3em;
+    color:forestgreen;
+}
+
+.short_desc{
+    color: rgba(0,0,0,0.8);
+    font-size: 0.75em;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.desc-title{
+    margin-top: 2rem;
+    color: rgba(0,0,0,0.6);
+    border-bottom: 2px solid rgba(0,0,0,0.4);
+}
+
+.full-desc{
+    margin-top: 0.7rem;
+    font-size: 1.1em;
+}
+
+.nav-tabs{
+    font-size: 0.7em;
+}
+.nav-tabs .nav-item{
+    max-width: 3.5rem;
+}

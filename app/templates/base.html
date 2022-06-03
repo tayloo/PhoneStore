@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script> 
+        <script   src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css'%}"/>
+        {% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/store/style.css'%}"/>{% endblock %}
+        <title>{% block title %} Default title {% endblock %}</title>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <nav>
+                    <div class="container-fluid">
+                        <div class="row nav-w">
+                            {%block nav_left%}
+                            <div class="col-8">
+                            </div>
+                            {%endblock%}
+                            <div class="col-2">
+                                <div class="row align-items-center nav-w">
+                                    <div class="col-8">
+                                    </div>
+                                    {%if cart_link%}
+                                    <a href={{cart_link}} class="col-4 cart">
+                                        <span class="position-absolute bottom-0 start-100 translate-middle badge rounded-pill">
+                                            99+
+                                        </span>
+                                    </a>
+                                    {%else%}
+                                    <a href="" class="col-4 cart">
+                                    <span class="position-absolute bottom-0 start-100 translate-middle badge rounded-pill">
+                                            99+
+                                        </span>
+                                    </a>
+                                    {%endif%}
+                                </div>
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

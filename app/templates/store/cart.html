@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/store/styles_cart.css'%}"/>
+{% endblock %}
+{% block title %} Your cart {% endblock %}
+
+
+{%block nav_left%}
+    <div class=col-2></div>
+    <div class=col-6>
+        <div class="row">
+            <div class="col-xl-1"></div>
+            <a href="/" class="col-xl-4 nav-company">
+                <div class="row align-items-center">
+                    <div class="col-xl-1 col-1"></div>
+                    <div class="col-xl-2 col-3 phone-logo"></div>
+                    <div class="col-xl-8 col-4 align-self-center text">{{company_name}}</div>
+                    <div class="col-xl-1 col-4"></div>
+                </div>
+            </a>
+            <div class="col-lg-7"></div>
+        </div>
+    </div>
+{%endblock%}
+
+{% block content %}
+
+{% endblock %}
